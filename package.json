@@ -2,13 +2,11 @@
   "name": "studiounix-generation-api",
   "version": "1.0.0",
   "description": "Handles AI image generation for Studiounix.",
-  "main": "api/generate.js",
   "author": "Studiounix",
   "license": "ISC",
   "dependencies": {
     "@google-cloud/aiplatform": "^3.20.0",
     "cors": "^2.8.5",
-    "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2"
   }
 }
