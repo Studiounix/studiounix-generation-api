@@ -38,7 +38,7 @@ module.exports = async (req, res) => {
 
         const projectId = process.env.VERTEX_PROJECT_ID;
         const location = process.env.VERTEX_LOCATION;
-        const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${projectId}/locations/${location}/publishers/google/models/imagegeneration@005:predict`;
+        const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${projectId}/locations/${location}/publishers/google/models/imagen-4.0-generate-preview-06-06:predict`;
         
         const requestBody = {
             instances: [{ prompt: prompt }],
