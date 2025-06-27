@@ -40,13 +40,10 @@ module.exports = async (req, res) => {
         const location = process.env.VERTEX_LOCATION;
         const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${projectId}/locations/${location}/publishers/google/models/imagen-4.0-generate-preview-06-06:predict`;
         
-        // 4. THIS IS THE FIX: Add the aspectRatio to the 'parameters' object
         const requestBody = {
             instances: [{ prompt: prompt }],
-            parameters: { 
-                sampleCount: 1,
-                aspectRatio: aspectRatio || "1:1" // Use the provided ratio, or default to 1:1
-            }
+            parameters: { sampleCount: 1 },
+        };
 
         const googleResponse = await fetch(url, {
             method: 'POST',
