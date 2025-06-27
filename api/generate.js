@@ -55,7 +55,7 @@ module.exports = async (req, res) => {
                 "sampleCount": 1,
                 // ** INI ADALAH FITUR BARU **
                 // Menggunakan aspect ratio dari frontend, atau default ke "1:1" jika tidak ada
-                "aspectRatio": aspectRatio || "1:1" 
+                "aspectRatio": aspectRatio || "16:9" 
             },
         };
 
